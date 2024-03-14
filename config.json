@@ -139,16 +139,12 @@
       "type": "tun",
       "tag": "tun-in",
       "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
       "gso": true,
       "auto_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed",
-      "sniff": true,
-      "platform": {
-        "http_proxy": {
-          "enabled": true
-        }
-      }
+      "sniff": true
     }
   ],
   "outbounds": [
