@@ -174,7 +174,7 @@
       "type": "shadowsocks",
       "tag": "🛰",
       "detour": "shadowtls",
-      "method": "2022-blake3-chacha20-poly1305",
+      "method": "xchacha20-ietf-poly1305",
       "password": "IvlHBZdXWPhoCxa38W3AbBwdgSuaWiRkqdlDG0ticzo=",
       "udp_over_tcp": {
         "enabled": true,
