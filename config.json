@@ -11,9 +11,9 @@
       },
       {
         "tag": "dns_direct",
-        "address": "1.12.12.12",
+        "address": "119.29.29.29",
         "detour": "direct",
-        "client_subnet": "1.12.12.1"
+        "client_subnet": "119.29.29.1"
       },
       {
         "tag": "dns_block",
@@ -55,7 +55,7 @@
           "ip-cn"
         ],
         "server": "dns_proxy",
-        "client_subnet": "1.12.12.1",
+        "client_subnet": "119.29.29.1",
         "rewrite_ttl": 64
       }
     ],
