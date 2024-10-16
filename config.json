@@ -35,6 +35,14 @@
         "server": "dns_block"
       },
       {
+        "protocol": [
+          "bittorrent",
+          "ssh"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
         "rule_set": [
           "site-!cn"
         ],
@@ -59,7 +67,7 @@
       }
     ],
     "final": "dns_proxy",
-    "strategy": "prefer_ipv4",
+    "strategy": "prefer_ipv6",
     "independent_cache": true
   },
   "route": {
@@ -109,6 +117,13 @@
         "outbound": "block"
       },
       {
+        "protocol": [
+          "bittorrent",
+          "ssh"
+        ],
+        "outbound": "direct"
+      },
+      {
         "rule_set": [
           "site-!cn"
         ],
@@ -136,19 +151,14 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "inet4_address": "172.18.0.1/30",
+      "address": [
+        "172.18.0.1/30"
+      ],
       "gso": true,
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed",
-      "sniff": true
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
-      "listen_port": 8080,
       "sniff": true
     }
   ],
@@ -158,7 +168,7 @@
       "tag": "🎛️",
       "outbounds": [
         "📡",
-        "🛰"
+        "🛰IPV6️⃣"
       ],
       "default": "📡"
     },
@@ -166,12 +176,12 @@
       "type": "urltest",
       "tag": "📡",
       "outbounds": [
-        "🛰"
+        "🛰IPV6️⃣"
       ]
     },
     {
       "type": "shadowsocks",
-      "tag": "🛰",
+      "tag": "🛰IPV6️⃣",
       "detour": "shadowtls",
       "method": "xchacha20-ietf-poly1305",
       "password": "IvlHBZdXWPhoCxa38W3AbBwdgSuaWiRkqdlDG0ticzo=",
