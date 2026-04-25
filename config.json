@@ -269,6 +269,8 @@
       "tag": "🛰IPV4️⃣",
       "server": "62.204.54.173",
       "server_port": 443,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
       "password": "0V7Gl/wEWS9FV0Br1NMmIWmBV9yRn93/o5DRl2bvnQo=",
       "tls": {
         "enabled": true,
