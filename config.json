@@ -257,19 +257,6 @@
       "store_dns": true
     }
   },
-  "services": [
-    {
-      "type": "api",
-      "listen": "127.0.0.1",
-      "listen_port": 11211,
-      "secret": "yesokay",
-      "access_control_allow_origin": [
-        "http://sing-box-dashboard.sagernet.org",
-        "https://sing-box-dashboard.sagernet.org"
-      ],
-      "access_control_allow_private_network": true
-    }
-  ],
   "inbounds": [
     {
       "type": "tun",
