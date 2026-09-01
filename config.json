@@ -257,6 +257,19 @@
       "store_dns": true
     }
   },
+  "services": [
+    {
+      "type": "api",
+      "listen": "127.0.0.1",
+      "listen_port": 11211,
+      "secret": "yesokay",
+      "access_control_allow_origin": [
+        "http://sing-box-dashboard.sagernet.org",
+        "https://sing-box-dashboard.sagernet.org"
+      ],
+      "access_control_allow_private_network": true
+    }
+  ],
   "inbounds": [
     {
       "type": "tun",
@@ -279,7 +292,7 @@
       "tag": "🎛️",
       "outbounds": [
         "📡",
-        "🛰IPV6️⃣"
+        "🛰IPV4️⃣"
       ],
       "default": "📡"
     },
@@ -287,12 +300,12 @@
       "type": "urltest",
       "tag": "📡",
       "outbounds": [
-        "🛰IPV6️⃣"
+        "🛰IPV4️⃣"
       ]
     },
     {
       "type": "anytls",
-      "tag": "🛰IPV6️⃣",
+      "tag": "🛰IPV4️⃣",
       "server": "62.204.54.173",
       "server_port": 443,
       "tcp_multi_path": true,
